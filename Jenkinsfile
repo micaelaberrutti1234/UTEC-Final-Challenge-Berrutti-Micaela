@@ -36,7 +36,7 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scm
-        echo "Starting Performance Testing Pipeline for ${env.BRANCH_NAME}"
+        echo "Starting Performance Testing Pipeline for Master"
       }
     }
 
@@ -194,7 +194,7 @@ pipeline {
 <body>
     <div class="header">
         <h1>🚀 Performance Test Report</h1>
-        <p><strong>Build:</strong> #${BUILD_NUMBER} | <strong>Branch:</strong> ${BRANCH_NAME} | <strong>Date:</strong> \$(date)</p>
+        <p><strong>Build:</strong> #${BUILD_NUMBER} | <strong>Branch:</strong> Master | <strong>Date:</strong> \$(date)</p>
         <p><strong>Test Environment:</strong> Docker Containerized | <strong>Application:</strong> E-commerce API</p>
     </div>
 EOF
