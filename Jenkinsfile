@@ -104,7 +104,7 @@ pipeline {
           set +e  # Don't fail immediately on error
           echo "=== Running JMeter tests with 5-minute timeout ==="
           timeout 300 docker exec ${JMETER_CONTAINER_NAME} jmeter -n \
-            -t /work/jmeter/Trabajo Integrador.jmx \
+            -t /work/jmeter/trabajo-Integrador.jmx \
             -l /work/out/results.jtl \
             -e -o /work/out/jmeter-report \
             -f \
