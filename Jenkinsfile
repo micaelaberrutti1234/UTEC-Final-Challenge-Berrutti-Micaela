@@ -426,8 +426,9 @@ EOF
             }
 
             // Enhanced build description with more metrics
-            currentBuild.description = "Success: ${Math.round(successRate * 10) / 10}% | Avg: ${avgResponse}ms | Max: ${maxResponse}ms | Requests: ${results}"
-            
+            def roundedSuccessRate = String.format("%.1f", successRate)
+            currentBuild.description = "Success: ${roundedSuccessRate}% | Avg: ${avgResponse}ms | Max: ${maxResponse}ms | Requests: ${results}"
+
             echo "📈 Performance Plugin will provide detailed trends and comparisons"
             echo "📊 Check 'Performance Trend' graph in project dashboard"
           }
