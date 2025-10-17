@@ -17,7 +17,7 @@ RUN mkdir -p /tmp/dependencies \
 
 # For educational purposes, we'll create a simple JMeter setup
 # In production, you would add the Prometheus listener JAR here
- COPY jmeter-prometheus-plugin-0.6.0.jar ${JMETER_HOME}/lib/ext/jmeter-prometheus-plugin-0.6.0.jar
+ COPY jmeter-prometheus-listener-2.6.3.jar ${JMETER_HOME}/lib/ext/jmeter-prometheus-listener-2.6.3.jar
 
 # Expose the Prometheus scrape port used by the listener
 EXPOSE 9270
